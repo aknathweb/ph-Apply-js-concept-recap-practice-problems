@@ -4,4 +4,5 @@ function FahrenheitToCelsius(Fahrenheit) {
     const Celsius = (5 / 9) * (Fahrenheit - 32);
     return Celsius;
 }
-console.log("Fahrenheit to Celsius temperature : ", FahrenheitToCelsius(68));
+const FahrenheitTemperature = 68;
+console.log("Fahrenheit to Celsius temperature : ", FahrenheitToCelsius(FahrenheitTemperature));
