@@ -8,7 +8,7 @@ function GradeIdentify1(Mark) {
 const SubjectMark1 = 40;
 console.log("one way, ", SubjectMark1, " Mark corresponding Grade :", GradeIdentify1(SubjectMark1));
 
-// another way 
+// second way 
 function GradeIdentify(Mark) {
     let Grade;
     if (Mark > 79)
@@ -25,5 +25,35 @@ function GradeIdentify(Mark) {
         Grade = "D";
     return { Grade, Mark };
 }
-const SubjectMark2 = 50;
-console.log("Another way, ", GradeIdentify(SubjectMark2).Mark, " Mark corresponding Grade :", GradeIdentify(SubjectMark2).Grade);
+const SubjectMark = 50;
+console.log("second way using if else, ", GradeIdentify(SubjectMark).Mark, " Mark corresponding Grade :", GradeIdentify(SubjectMark).Grade);
+
+// third way 
+function GradeIdentify2(Mark) {
+    switch (true) {
+        case (Mark > 79):
+            Grade = "A+";
+            break;
+        case (Mark > 69):
+            Grade = "A";
+            break;
+        case (Mark > 59):
+            Grade = "A-";
+            break;
+        case (Mark > 49):
+            Grade = "B";
+            break;
+        case (Mark > 39):
+            Grade = "C";
+            break;
+        case (Mark > 32):
+            Grade = "D";
+            break;
+        default:
+            Grade = "Fail";
+            break;
+    }
+    return Grade;
+}
+const SubjectMark2 = 80;
+console.log("third way using switch, ", GradeIdentify2(SubjectMark2).Mark, " Mark corresponding Grade :", GradeIdentify(SubjectMark2).Grade);
